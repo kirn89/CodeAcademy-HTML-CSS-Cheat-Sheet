@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./Resources/css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header id="topheader">
+            <h1>My CSS Cheat Sheet</h1>
+            <h2>CSS Selectors and Specificity</h2>
+        </header>
+        <main>
+            <div class="topic">
+                <div class="sectionheader">
+                    <h2 class="sectionheading">CSS Selectors</h2>
+                </div>
+                <table class="table">
+                    <thead>                      
+                        <colgroup>
+                            <col class="selector">
+                            <col class="example">
+                            <col class="description">
+                        </colgroup>
+
+                        <tr>
+                            <th scope="col">Selector</th>
+                            <th scope="col">Example</th>
+                            <th scope="col">Example description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                       
+                        <tr>
+                            <td><em>.class</em></td>
+                            <td>.intro</td>
+                            <td>Selects all elements with class="intro"</td>
+                        </tr>
+                        <tr>
+                            <td><em>.class1.class2</em></td>
+                            <td>.name1.name2</td>
+                            <td>Selects all elements with both name1 and name2 set within its class attribute</td>
+                        </tr>
+                        <tr>
+                            <td><em>.class1 .class2</em></td>
+                            <td>.name1 .name2</td>
+                            <td>Selects all elements with name2 that is a descendant of an element with name1</td>
+                        </tr>
+                        <tr>
+                            <td><em>#id</em></td>
+                            <td>#firstname</td>
+                            <td>Selects the element with id="firstname"</td>
+                        </tr>
+                        <tr>
+                            <td><em>*</em></td>
+                            <td>*</td>
+                            <td>Selects all elements</td>
+                        </tr>
+                        <tr>
+                            <td><em>element</em></td>
+                            <td>p</td>
+                            <td>Selects all &lt;p&gt; elements</td>
+                        </tr>
+                        <tr>
+                            <td><em>element.class</em></td>
+                            <td>p.intro</td>
+                            <td>Selects all &lt;p&gt; elements with class="intro"</td>
+                        </tr>
+                        <tr>
+                            <td><em>element, element</em></td>
+                            <td>div, p</td>
+                            <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+                        </tr>
+                        <tr>
+                            <td><em>element element</em></td>
+                            <td>div p</td>
+                            <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+                        </tr>
+
+                        <tr>
+                            <td><em>element&gt;element</em></td>
+                            <td>div &gt; p</td>
+                            <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+                        </tr>
+                        <tr>
+                            <td><em>element + element</em></td>
+                            <td>div + p</td>
+                            <td>Selects the first &lt;p&gt; element that is placed immediately after &lt;div&gt; elements</td>
+                        </tr>
+                        <tr>
+                            <td><em>element1 ~ element2</em></td>
+                            <td>p ~ ul</td>
+                            <td>Selects every &lt;ul&gt; element that is preceded by a &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute]</em></td>
+                            <td>[target]</td>
+                            <td>Selects all elements with a target attribute</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute=value]</em></td>
+                            <td>[target=_blank]</td>
+                            <td>Selects all elements with target="_blank"</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute~=value]</em></td>
+                            <td>[title~=flower]</td>
+                            <td>Selects all elements with a title attribute containing the word "flower"</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute|=value]</em></td>
+                            <td>[lang|=en]</td>
+                            <td>Selects all elements with a lang attribute value equal to "en" or starting with "en-"</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute^=value]</em></td>
+                            <td>a[href^="https"]</td>
+                            <td>Selects every &lt;a&gt; element whose href attribute value begins with "https"</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute$=value]</em></td>
+                            <td>a[href$=".pdf"]</td>
+                            <td>Selects every &lt;a&gt; element whose href attribute value ends with ".pdf"</td>
+                        </tr>
+                        <tr>
+                            <td><em>[attribute*=value]</em></td>
+                            <td>a[href*="w3schools"]</td>
+                            <td>Selects every &lt;a&gt; element whose href attribute value contains the substring "w3schools"</td>
+                        </tr>
+                        <tr>
+                            <td><em>:active</em></td>
+                            <td>a:active</td>
+                            <td>Selects the active link</td>
+                        </tr>
+                        <tr>
+                            <td><em>::after</em></td>
+                            <td>p::after</td>
+                            <td>Insert something after the content of each &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                            <td><em>::before</em></td>
+                            <td>p::before</td>
+                            <td>Insert something before the content of each &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                            <td><em>:read-only</em></td>
+                            <td>input:read-only</td>
+                            <td>Selects input elements with the "readonly" attribute specified</td>
+                        </tr>
+                        <tr>
+                            <td><em>:read-write</em></td>
+                            <td>input:read-write</td>
+                            <td>Selects input elements with the "readonly" attribute NOT specified</td>
+                        </tr>
+                        <tr>
+                            <td><em>:root</em></td>
+                            <td>:root</td>
+                            <td>Selects the document's root element</td>
+                        </tr>
+                    </tbody>   
+                </table>
+            </div>
+
+            <div class="topic">
+                <div class="sectionheader">
+                    <h2 class="sectionheading">CSS Specificity</h2>
+                </div>
+                <h3>Specificity Hierarchy</h3>
+                <p>Every CSS selector has its place in the specificity hierarchy.<br><br>
+
+                    There are four categories which define the specificity level of a selector:<br>
+                 
+                    <ol>
+                        <li>Inline styles - Example: &lt;h1 style="color: pink;"&gt;</li>
+                        <li>IDs - Example: #navbar</li>
+                        <li>Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]</li>
+                        <li>Elements and pseudo-elements - Example: h1, :before</li>
+                    </ol>
+
+                    The table below shows some examples on how to calculate specificity values:
+                </p>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Specificity Value</th>
+                            <th>Calculation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>p</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>p.test</td>
+                            <td>11</td>
+                            <td>1 + 10</td>
+                        </tr>
+                        <tr>
+                            <td>p#demo</td>
+                            <td>101</td>
+                            <td>1 + 100</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;p style="color: pink;"&gt;</td>
+                            <td>1000</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>#demo</td>
+                            <td>100</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>.test</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>p.test1.test2</td>
+                            <td>21</td>
+                            <td>1 + 10 + 10</td>
+                        </tr>
+                        <tr>
+                            <td>#navbar p#demop</td>
+                            <td>201</td>
+                            <td>100 + 1 + 100</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>0</td>
+                            <td>0 (the universal selector is ignored)</td>
+                        </tr>                
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <p>Thank you for visiting my cheat sheet!</p>
+        </footer>
+    </body>
+</html>
